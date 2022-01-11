@@ -1,0 +1,49 @@
+@mixin size {
+    border-radius: 10px;
+    height: 23px;
+}
+
+@mixin formSize {
+  display: flex;
+  height: 40vh;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 350px;
+  border-radius: 15px;
+  background-color: rgb(88, 235, 186);
+  border: 0.5px solid rgb(188, 250, 234);
+  color: white;
+  text-shadow: 0.2px 0 0.2px #000
+}
+
+.form {
+  .email{
+    @include size;
+    
+  }
+  .password{
+    @include size;
+  }
+}
+
+.login_container {
+    @include formSize;
+}
+
+.login_button {
+    margin-top: 20px;
+    width: 85px;
+    height: 26px;
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+}
+
+label {
+    text-align: center;
+}
+
+
+
