@@ -1,8 +1,8 @@
-
+import styles from '../Styles/About.module.scss';
 
 const About = () =>{
     return (
-        <h1 style={{textAlign:'center'}}>This is About Page</h1>
+        <h1 className={styles.about}>This is About Page</h1>
     )
 }
 

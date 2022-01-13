@@ -1,8 +1,4 @@
-form{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+
 
 .navbar {
   background-color: rgb(88, 235, 186);
@@ -25,7 +21,6 @@ form{
   font-size: 20px;
   text-decoration: none;
   color: aliceblue;
-  /* -webkit-text-stroke: 0.2px #000000; */
 }
 
 .active {
@@ -39,31 +34,6 @@ form{
   margin-left: 20px;
 }
 
-.auth_form input {
-  border-radius: 10px;
-  height: 23px;
-}
-
-
-.auth_form_container {
-  display: flex;
-  height: 80vh;
-  flex-direction: column;
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 350px;
-  border-radius: 15px;
-  background-color: rgb(88, 235, 186);
-  border: 0.5px solid rgb(188, 250, 234);
-  color: white;
-  text-shadow: 0.2px 0 0.2px #000
-  
-}
-
-label {
-  margin-bottom: 3px;
-  font-size: 18px;
-}
 
 .sign_link {
   display: flex;

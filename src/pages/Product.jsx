@@ -1,7 +1,8 @@
+import styles from "../Styles/Product.module.scss"
 
 const Product = () => {
     return (
-        <h1 style={{textAlign:'center'}}>Product page</h1>
+        <h1 className={styles.product}>Product page</h1>
     ) 
 }
 

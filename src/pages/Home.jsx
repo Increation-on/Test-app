@@ -1,7 +1,8 @@
+import styles from '../Styles/Home.module.scss';
 
 const Home = () => {
     return (
-        <h1 style={{textAlign:'center'}}>This is Home Page</h1>
+        <h1 className={styles.home}>This is Home Page</h1>
     )
 }
 

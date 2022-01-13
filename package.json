@@ -1,5 +1,5 @@
 {
-  "name": "build-test",
+  "name": "manao-test-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-server": "node index.js && npm start",
+    "start-server": "node server.js && npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

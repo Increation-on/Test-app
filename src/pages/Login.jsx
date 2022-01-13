@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import styles from './Login.module.scss';
+import styles from '../Styles/Login.module.scss';
 
 
 const Login = () => {
@@ -37,7 +37,7 @@ const Login = () => {
                     placeholder="Enter email"
                     onChange={(e) => setEmail(e.target.value)} value={email}
                 />
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" className={styles.pass_labe}>Password</label>
                 <input
                     type="password"
                     className={styles.password}

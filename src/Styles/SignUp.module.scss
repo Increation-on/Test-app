@@ -1,0 +1,55 @@
+$error-color: red;
+
+h1 {
+    text-align: center;
+}
+
+.auth_form {
+    input {
+        border-radius: 10px;
+        height: 23px;
+    }
+}
+
+.auth_form_container {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 350px;
+    border-radius: 15px;
+    background-color: rgb(88, 235, 186);
+    border: 0.5px solid rgb(188, 250, 234);
+    color: white;
+    text-shadow: 0.2px 0 0.2px #000;
+    border: 2px solid black;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input_err {
+    height: 40px;
+}
+
+.input_err_p {
+    color: $error-color;
+    height: 20px;
+    margin: 10px 0 5px 0;
+}
+
+label {
+    margin-bottom: 3px;
+    font-size: 18px;
+}
+
+.reg_button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
