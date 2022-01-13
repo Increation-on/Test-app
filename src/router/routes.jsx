@@ -8,7 +8,7 @@ export const privateRoutes = [
     { path: '/about', component: About },
     { path: '/home', component: Home },
     { path: '/product', component: Product }
-]
+];
 
 
 

@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-import PrivateComponent from "../router/PrivateComponent";
-import { privateRoutes } from "../router/routes";
+import PrivateComponent from "./PrivateComponent";
+import { privateRoutes } from "./routes";
 
 const AppRouter = () => {
     return (
@@ -28,4 +28,4 @@ const AppRouter = () => {
     )
 }
 
-export default AppRouter
+export default AppRouter;

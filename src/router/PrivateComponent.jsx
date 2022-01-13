@@ -5,4 +5,4 @@ const PrivateComponent = () => {
     return auth?<Outlet/>:<Navigate to='/registration'/>
 }
 
-export default PrivateComponent
+export default PrivateComponent;

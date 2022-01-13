@@ -1,4 +1,8 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom';
+import styles from '../Styles/Navbar.module.scss';
+
+//ACTIVE STYLES !!!!!!
+
 
 const Navbar = () => {
     const auth = localStorage.getItem('user');
@@ -10,20 +14,20 @@ const Navbar = () => {
     }
     return (
         <div>
-            <div className="navbar">
-                <div className='auth_link'>
+            <div className={styles.navbar}>
+                <div className={styles.auth_link}>
                     {auth ?
-                        <NavLink to='/registration' onClick={logout} className='nav_link'>Logout</NavLink>
-                        : <div className='sign_link'>
-                            <NavLink to='/registration' className='nav_link'>Sign Up</NavLink>
-                            <NavLink to='/login' className='nav_link'>Login</NavLink>
+                        <NavLink to='/registration' onClick={logout} className={styles.nav_link}>Logout</NavLink>
+                        : <div className={styles.sign_link}>
+                            <NavLink to='/registration' className={styles.nav_link}>Sign Up</NavLink>
+                            <NavLink to='/login' className={styles.nav_link}>Login</NavLink>
                         </div>}
                 </div>
                 {auth ?
-                    <div className='navbar_links'>
-                        <NavLink to='/home' className='nav_link'>Home</NavLink>
-                        <NavLink to='/about' className='nav_link'>About</NavLink>
-                        <NavLink to='/product' className='nav_link'>Product</NavLink>
+                    <div className={styles.navbar_menu_links}>
+                        <NavLink to='/home' className={styles.nav_link}>Home</NavLink>
+                        <NavLink to='/about' className={styles.nav_link}>About</NavLink>
+                        <NavLink to='/product'className={styles.nav_link}>Product</NavLink>
                     </div> :
                     null
                  }
