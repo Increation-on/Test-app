@@ -6,7 +6,10 @@ import styles from '../Styles/Navbar.module.scss';
 
 const Navbar = () => {
     const auth = localStorage.getItem('user');
+    const menu = require('../mockMenu/menu.json');
+    const authMenu = require('../mockMenu/authMenu.json')
     
+
     const navigate = useNavigate();
     const logout = () => {
         localStorage.clear();
@@ -17,20 +20,21 @@ const Navbar = () => {
             <div className={styles.navbar}>
                 <div className={styles.auth_link}>
                     {auth ?
-                        <NavLink to='/registration' onClick={logout} className={styles.nav_link}>Logout</NavLink>
+                        <NavLink to={authMenu[0].to} onClick={logout} className={styles.nav_link}>Logout</NavLink>
                         : <div className={styles.sign_link}>
-                            <NavLink to='/registration' className={styles.nav_link}>Sign Up</NavLink>
-                            <NavLink to='/login' className={styles.nav_link}>Login</NavLink>
+                            {authMenu.map(el =>
+                            <NavLink to={el.to} key={el.title} className={({isActive})=>isActive?styles.auth_active_link:styles.auth_link}>{el.title}</NavLink>
+                        )}
                         </div>}
                 </div>
                 {auth ?
                     <div className={styles.navbar_menu_links}>
-                        <NavLink to='/home' className={styles.nav_link}>Home</NavLink>
-                        <NavLink to='/about' className={styles.nav_link}>About</NavLink>
-                        <NavLink to='/product'className={styles.nav_link}>Product</NavLink>
+                        {menu.map(el =>
+                            <NavLink to={el.to} key={el.title} className={({isActive})=>isActive?styles.nav_active_link:styles.nav_link}>{el.title}</NavLink>
+                        )}
                     </div> :
                     null
-                 }
+                }
             </div>
         </div>
 

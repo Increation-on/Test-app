@@ -1,0 +1,6 @@
+[
+    {"to":"/about", "title": "About"},
+    {"to":"/product", "title": "Product"},
+    {"to":"/home", "title": "Home"}
+]
+    

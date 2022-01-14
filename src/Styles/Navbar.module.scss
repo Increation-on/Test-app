@@ -15,25 +15,37 @@
 
 }
 
+.nav_active_link {
+    color: rgba(229, 243, 106, 0.89);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
 .nav_link {
     font-size: 20px;
     text-decoration: none;
     color: aliceblue;
 }
 
-// .active {
-//     color: rgba(229, 243, 106, 0.89);
-//     text-decoration: none;
-//     font-weight: bold;
-//     font-size: 20px;
-// }
+
+.auth_active_link {
+    color: rgba(229, 243, 106, 0.89);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 22px;
+}
 
 .auth_link {
     margin-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
 }
 
 
-.sign_link {
+.sign_link_containr {
     display: flex;
     width: 150px;
     justify-content: space-between;

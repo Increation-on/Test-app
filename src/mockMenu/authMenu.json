@@ -1,0 +1,4 @@
+[
+    {"to":"/registration", "title": "Registration"},
+    {"to":"/login", "title": "Login"}
+]
