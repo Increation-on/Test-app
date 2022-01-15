@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import styles from '../Styles/SignUp.module.scss';
+import RequestSrvice from '../api/RequestService';
 
 
 const SignUp = () => {
@@ -30,27 +31,7 @@ const SignUp = () => {
   });
 
   const onFormSubmit = async (formData) => {
-
-    const response = await fetch('http://localhost:5000/auth/registration', {
-      method: 'POST',
-      headers: {
-        "Content-Type": 'application/json'
-      },
-      body: JSON.stringify({
-        email: formData.email,
-        password: formData.password,
-        name: formData.name,
-        username: formData.login,
-      })
-    }).then((response) => {
-      if (response.status >= 400 && response.status < 600) {
-        throw new Error('Bad response from server');
-      }
-      return response;
-    })
-      .catch(reject => {
-        console.log(reject);
-      });
+    const response = await RequestSrvice.registration(formData);
     const data = await response.json();
     localStorage.setItem('user', JSON.stringify(data))
     if (data) {
@@ -58,7 +39,7 @@ const SignUp = () => {
     }
     reset();
 
-  }
+  };
 
   const password = useRef({});
   password.current = watch('password', '');
