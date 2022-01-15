@@ -8,22 +8,22 @@ import { privateRoutes } from "./routes";
 const AppRouter = () => {
     return (
         <Routes>
-            <Route element={<PrivateComponent/>}>
-                {privateRoutes.map(r=>
+            <Route element={<PrivateComponent />}>
+                {privateRoutes.map(r =>
                     <Route
                         path={r.path}
-                        element={<r.component/>}
+                        element={<r.component />}
                         key={r.path}
                     />
                 )}
             </Route>
-            
-            <Route path='/registration' element={<SignUp/>}/>
-            <Route path='/' element={<SignUp/>}/>
-            <Route path='*' element={<ErrorPage/>}/>
-            <Route path='/error' element={<ErrorPage/>}/>
-            <Route path='/login' element={<Login/>}/>
-            
+
+            <Route path='/registration' element={<SignUp />} />
+            <Route path='/' element={<SignUp />} />
+            <Route path='*' element={<ErrorPage />} />
+            <Route path='/error' element={<ErrorPage />} />
+            <Route path='/login' element={<Login />} />
+
         </Routes>
     )
 };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import styles from '../Styles/Login.module.scss';
+import RequestSrvice from "../api/RequestService";
 
 
 const Login = () => {
@@ -11,15 +12,10 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        let result = await fetch('http://localhost:5000/auth/login', {
-            method: 'post',
-            body: JSON.stringify({ email, password }),
-            headers: { "Content-Type": 'application/json' }
-        });
-        result = await result.json();
-        console.log(result);
-        if (result.token) {
-            localStorage.setItem('user', JSON.stringify(result));
+        const response = await RequestSrvice.login(email, password);
+        const data  = await response.json();
+        if (data.token) {
+            localStorage.setItem('user', JSON.stringify(data));
             navigate('/home');
         } else {
             alert('enter correct details')
