@@ -1,20 +1,17 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import styles from '../Styles/Navbar.module.scss';
 
-//ACTIVE STYLES !!!!!!
-
-
 const Navbar = () => {
     const auth = localStorage.getItem('user');
     const menu = require('../mockMenu/menu.json');
     const authMenu = require('../mockMenu/authMenu.json')
-    
-
     const navigate = useNavigate();
+
     const logout = () => {
         localStorage.clear();
         navigate('/registration')
-    }
+    };
+    
     return (
         <div>
             <div className={styles.navbar}>

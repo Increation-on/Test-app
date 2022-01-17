@@ -6,7 +6,7 @@ const Footer = ()=> {
 
     return (
         <div className={styles.footer}>
-            <p>All Rights Reserved © {year}.</p>
+            <p>All Rights Reserved © {year}</p>
         </div>
     )
 }
