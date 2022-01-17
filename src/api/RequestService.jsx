@@ -28,7 +28,7 @@ export default class RequestSrvice {
 
   static async login(email, password) {
     const response = await fetch(`http://${REACT_APP_DOMAIN}:${REACT_APP_PORT}/auth/login`, {
-      method: 'post',
+      method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: {
         "Content-Type": 'application/json'
