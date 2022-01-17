@@ -7,10 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: no-repeat url('https://images.wallpaperscraft.ru/image/single/razvody_kraska_zhidkost_166123_1280x720.jpg');
   background-size: 100%; 
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Tourney:wght@200&display=swap');
