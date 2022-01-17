@@ -1,7 +1,9 @@
+require('dotenv').config({path:'../.env'});
 const express = require('express');
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 5000;
-const authRouter = require('./authRouter')
+const port = process.env.REACT_APP_PORT || 5000;
+const domain = process.env.REACT_APP_DOMAIN;
+const authRouter = require('./authRouter');
 const cors = require('cors');
 
 
@@ -20,7 +22,7 @@ app.use('/auth', authRouter);
 const start = async () => {
     try {
         await mongoose.connect('mongodb+srv://increation:132213a@cluster0.prkz5.mongodb.net/users_data?retryWrites=true&w=majority')
-        app.listen(PORT, ()=> console.log(`server started on port ${PORT}`))
+        app.listen(port, ()=> console.log(`server started on port ${domain}:${port}`))
     } catch(e){
         console.log(e);
     }
